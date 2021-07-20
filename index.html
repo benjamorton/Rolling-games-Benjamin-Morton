@@ -203,11 +203,11 @@
             var now = new Date();
             // Inserta la hora almacenada en clock en el span con id dia
             tiempo.dias = document.getElementById('dia');
-            tiempo.dias.innerHTML = clock.getDate() - now.getDate();
+            tiempo.dias.innerHTML = (clock.getDay() + ((clock.getMonth() - now.getMonth()) * 30)) - now.getDay();
 
             // Inserta la hora almacenada en clock en el span con id hora
-            tiempo.dias = document.getElementById('dia');
-            tiempo.dias.innerHTML = (clock.getDay() + ((clock.getMonth() - now.getMonth()) * 30)) - now.getDay();
+            tiempo.horas = document.getElementById('hora');
+            tiempo.horas.innerHTML = -1 * (clock.getHours() - now.getHours());
 
             // Inserta los minutos almacenados en clock en el span con id minuto
             tiempo.minuto = document.getElementById('minuto');
