@@ -276,7 +276,7 @@ h2 {
     background: url(https://images2.alphacoders.com/112/thumb-1920-112432.jpg) 50% 0 no-repeat fixed;
     filter: brightness( 80%);
     color: white;
-    height: 1300px;
+    height: auto;
     margin: 0 auto;
     padding: 0;
 }
@@ -285,7 +285,7 @@ h2 {
     background: url(https://wallpaperaccess.com/full/3041532.jpg) 50% 0 no-repeat fixed;
     filter: brightness( 80%);
     color: white;
-    height: 1300px;
+    height: auto;
     margin: 0 auto;
     overflow: hidden;
     padding: 0;
@@ -295,7 +295,7 @@ h2 {
     background: url(https://images7.alphacoders.com/115/thumb-1920-1151173.jpg) 50% 0 no-repeat fixed;
     filter: brightness( 70%);
     color: white;
-    height: 650px;
+    height: auto;
     padding: 100px 0 0 0;
 }
 
