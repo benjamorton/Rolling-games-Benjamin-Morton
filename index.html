@@ -135,12 +135,15 @@
     <!--#intro-->
 
     <div id="second">
+
         <div class="story">
             <div class="float-right">
                 <h2>World Of Warcraft Classic</h2>
+
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque nihil accusantium eveniet! Quidem ipsum ut labore iusto nesciunt asperiores nihil voluptates esse, reprehenderit pariatur dolorum, maiores, praesentium ratione veniam neque.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequatur expedita obcaecati. Illo facere odit asperiores dolore omnis esse, debitis reprehenderit atque accusantium unde magni error expedita itaque consequuntur qui.</p>
-            </div>
+            </div><iframe width="560" height="315" src="https://www.youtube.com/embed/W_0AzVqIEMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                style="margin-top: 10%;"></iframe>
         </div>
         <!--.story-->
 
@@ -158,6 +161,7 @@
             <div onLoad="mostrar_hora()" style="font-size: 4rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
                 <div id="fecha">
                     <span id="dia"></span> Dias <span id="hora"></span> : <span id="minuto"></span> : <span id="segundo"></span>
+                    <p style="font-size: 0.9rem;">22 de octubre de 2021</p>
                 </div>
             </div>
         </div>
@@ -191,7 +195,7 @@
     <script>
         // Variables Globales
         var tiempo = {};
-        var clock = new Date("2022-06-30 5:00:00 PM"); // Obtener la fecha y almacenar en clock
+        var clock = new Date("2021-10-22 00:00:00 AM"); // Obtener la fecha y almacenar en clock
         var intervalo = window.setInterval(mostrar_hora, 1); // Frecuencia de actualización
         var i = 0; // Esta variable me ayudará a definir los estados de intervalo
 
@@ -202,8 +206,8 @@
             tiempo.dias.innerHTML = clock.getDate() - now.getDate();
 
             // Inserta la hora almacenada en clock en el span con id hora
-            tiempo.horas = document.getElementById('hora');
-            tiempo.horas.innerHTML = clock.getHours() - now.getHours();
+            tiempo.dias = document.getElementById('dia');
+            tiempo.dias.innerHTML = (clock.getDay() + ((clock.getMonth() - now.getMonth()) * 30)) - now.getDay();
 
             // Inserta los minutos almacenados en clock en el span con id minuto
             tiempo.minuto = document.getElementById('minuto');
