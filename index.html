@@ -45,7 +45,7 @@
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
+                            <div class="modal-content" id="loginModal">
                                 <div class="login">
                                     <form name='form-login'>
 
@@ -58,15 +58,16 @@
                                         <input type="password" id="userPw" placeholder="Password" required>
 
                                         <div id="remember">
-                                            <input type="checkbox" value="lsRememberMe" id="rememberMe" style="display: inline-block;">
+                                            <input type="checkbox" value="lsRememberMe" id="rememberMe" style="display: inline-block;    width: 2rem;
+                                            height: 2rem;">
                                             <label>Recordarme</label>
                                         </div>
 
-                                        <input id="login_btn" button type="button" class="btn btn-outline-primary" type="submit" value="Login" onclick="check()">
+                                        <input id="login_btn" button type="button" class="btn btn-outline-primary" type="submit" value="Login" onclick="check()" style="font-size: 2rem; color: #ffffff;">
                                         <form class="form-inline my-2 my-lg-0 ">
                                             <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModala">
+                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModala" style="font-size: 2rem; color: #ffffff;">
                                             Registrar
                                         </button>
 
@@ -87,7 +88,7 @@
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModala" tabindex="-1" aria-labelledby="exampleModalaLabel" aria-hidden="true">
                             <div class="modal-dialog ">
-                                <div class="modal-content ">
+                                <div class="modal-content " id="regModal">
                                     <div class="login">
                                         <form name='form-login '>
 
@@ -100,12 +101,12 @@
                                             <input type="password" id="pw" placeholder="Password" required>
 
                                             <ul class="helper-text">
-                                                <li class="length">Debe tener 8 caracteres de largo.</li>
-                                                <li class="lowercase">Debe contener por lo menos una minuscula.</li>
-                                                <li class="uppercase">Debe contener por lo menos una mayuscula.</li>
-                                                <li class="special">Debe contener un caracter especial.</li>
+                                                <li class="length" style="font-size: 0.9rem;">Debe tener 8 caracteres de largo.</li>
+                                                <li class="lowercase" style="font-size: 0.9rem;">Debe contener por lo menos una minuscula.</li>
+                                                <li class="uppercase" style="font-size: 0.9rem;">Debe contener por lo menos una mayuscula.</li>
+                                                <li class="special" style="font-size: 0.9rem;">Debe contener un caracter especial.</li>
                                             </ul>
-                                            <input id="rgstr_btn" button type="button" class="btn btn-outline-primary" type="submit" value="Register" onclick="store()">
+                                            <input id="rgstr_btn" button type="button" class="btn btn-outline-primary" type="submit" value="Register" onclick="store()" style="font-size: 3rem; color: #ffffff;">
 
                                         </form>
                                     </div>
