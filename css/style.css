@@ -4,7 +4,7 @@
 #navbar {
     overflow: hidden;
     background-color: #05050546;
-    padding: 90px 10px;
+    padding: 10px 10px;
     /* Large padding which will shrink on scroll (using JS) */
     transition: 0.4s;
     /* Adds a transition effect when the padding is decreased */
@@ -37,13 +37,11 @@
 #logo,
 #imglogo,
 #fontcre {
-    font-size: 35px;
     font-weight: bold;
     transition: 0.4s;
 }
 
 #botncre {
-    font-size: 25px;
     font-weight: bold;
     transition: 0.4s;
 }
