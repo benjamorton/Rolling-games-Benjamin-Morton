@@ -1,8 +1,17 @@
 let juegos= JSON.parse(localStorage.getItem('juegosKey')) || [];
 
+// Pedimos los datos del usuario logueado
+const usuarioLogueado=JSON.parse(localStorage.getItem('usuarioLogueado'))
+
+// Si no hay un usuario logueado, redirigir al home
+if(usuarioLogueado){
+    // Si existe un usuario logueado, preguntar si es el administrador, de lo contrario redirigir al home
+    {usuarioLogueado.nombre === 'Admin' ? '' : window.location.replace('/')}
+}else{
+    window.location.replace('/')
+}
 // Agregar funcionalidad para abrir el modal
 var modalJuego = new bootstrap.Modal(document.getElementById('modal-agregar'))
-
 let btnAgregar = document.getElementById('btnAgregar');
 btnAgregar.addEventListener('click', ()=>{
   limpiarFormulario();  

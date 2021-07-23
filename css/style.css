@@ -1,34 +1,39 @@
-
-.bg-nav{
-    background-color: #283046;
-    padding: 10px 10px;  
-}
-
-
-.margin{
-    margin: 40px;
-}
-
-.btn-purple{
-    background-color: #7367f0;
-}
-
+/* Tags generales */
 body {
     background: #161d30;
     font: 87.5%/1.5em 'Open Sans', sans-serif;
+  
 }
-
+nav{
+    height: 55px;
+    background-color: #283046;
+    padding: 10px 10px;   
+}
 main{
     margin: 150px 0;
+    min-height: 68vh;
+}
+form{
+    background-color: #283046; 
+    padding:2rem 4rem;
+    border-radius: 5px;
+}
+footer{
+    background-color: #283046;
 }
 
+
+/* Links */
+.btn-purple{
+    background-color: #7367f0;
+    color: white;
+}
+.purple{
+    color: #7367f0;
+}
 .tBlack:hover{
     color: #7367f0 !important;
     
-}
-
-footer{
-    background-color: #283046;
 }
 
 .c-purple{
