@@ -21,7 +21,7 @@ class Juego{
         this.publicado= true
     }
 }
-
+let existeJuego= false
 
 
 // funcion para agregar Juegos
