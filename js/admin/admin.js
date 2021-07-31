@@ -10,6 +10,7 @@ if(usuarioLogueado){
 }else{
     window.location.replace('/')
 }
+
 // Agregar funcionalidad para abrir el modal
 var modalJuego = new bootstrap.Modal(document.getElementById('modal-agregar'))
 let btnAgregar = document.getElementById('btnAgregar');
@@ -36,11 +37,19 @@ let existeJuego= false
 // funcion para agregar Juegos
 window.agregarJuegos = () => {
     let codigoJuego= document.getElementById('codigoJuego').value
-    let nombreJuego= document.getElementById('nombreJuego').value
+
+    let nombreJuego= document.getElementById('nombreJuego').value.length > 30 ?
+    document.getElementById('nombreJuego').value.slice(0,30) : document.getElementById('nombreJuego').value
+    
     let categoriaJuego= document.getElementById('categoriaJuego').value
-    let descripcionJuego= document.getElementById('descripcionJuego').value
+    
+    let descripcionJuego= document.getElementById('descripcionJuego').value.length > 250 ?
+    document.getElementById('descripcionJuego').value.slice(0, 250) : document.getElementById('descripcionJuego').value
+
     let imagenesJuego= document.getElementById('imagenesJuego').value
+
     let codigoEmbedJuego= document.getElementById('codigoEmbedJuego').value
+
     if(validarGeneral()){
         let juego= new Juego(codigoJuego, nombreJuego, categoriaJuego, descripcionJuego, imagenesJuego, codigoEmbedJuego)
     
@@ -64,7 +73,7 @@ const renderizarDatos = () =>{
         <th scope="row">${juego.codigoJuego}</th>
         <td>${juego.nombreJuego}</td>
         <td>${juego.categoriaJuego}</td>
-        <td>${juego.descripcionJuego}</td>
+        <td>${juego.descripcionJuego.length > 70 ? juego.descripcionJuego.slice(0, 70) + '...' : juego.descripcionJuego}</td>
         <td><input onclick="ocultarJuego(this)" ${juego.publicado === false ? '' : 'checked'} id="${juego.codigoJuego}" type='checkbox'/></td>
         <td>
         <a onclick="editJuego(this)" id="${juego.codigoJuego}"><i class="far fa-edit"></i></a></a>
@@ -146,8 +155,12 @@ window.destJuego = (juego) => {
     for(let element of juegos){
         if(juego.id===element.codigoJuego){
             
-            element.destacada=!element.destacada
             localStorage.setItem('juegosDestKey', JSON.stringify(element));
+            element.destacada=!element.destacada
+
+            if(!element.destacada){
+             localStorage.removeItem('juegosDestKey');
+            }
             
         }else{
             element.destacada=false
@@ -191,11 +204,19 @@ const actualizarDatosJuego = () => {
     // validar los campos
     if(validarGeneral()){
         let codigoJuego= document.getElementById('codigoJuego').value;
-        let nombreJuego= document.getElementById('nombreJuego').value;
+
+        let nombreJuego= document.getElementById('nombreJuego').value.length > 30 ?
+        document.getElementById('nombreJuego').value.slice(0,30) : document.getElementById('nombreJuego').value;
+
         let categoriaJuego= document.getElementById('categoriaJuego').value;
-        let descripcionJuego= document.getElementById('descripcionJuego').value;
+
+        let descripcionJuego= document.getElementById('descripcionJuego').value.length > 250 ? 
+        document.getElementById('descripcionJuego').value.slice(0, 250) : document.getElementById('descripcionJuego').value;
+
         let imagenesJuego= document.getElementById('imagenesJuego').value;
+
         let codigoEmbedJuego= document.getElementById('codigoEmbedJuego').value;
+
         //buscar el objeto que quiero modificar y cambiar sus valores
         for (let juego of juegos){
             if(juego.codigoJuego===codigoJuego){

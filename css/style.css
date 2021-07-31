@@ -5,7 +5,6 @@ body {
   
 }
 nav{
-    height: 55px;
     background-color: #283046;
     padding: 10px 10px;   
 }
@@ -13,13 +12,24 @@ main{
     margin: 150px 0;
     min-height: 68vh;
 }
+footer{
+    background-color: #283046;
+}
+
+.my{
+    margin-top: 35px !important;
+    margin-bottom: 20px !important;
+}
+
+/* modal */
 form{
     background-color: #283046; 
     padding:2rem 4rem;
     border-radius: 5px;
 }
-footer{
+.bg-modal, .bg-modal div{
     background-color: #283046;
+    border: none;
 }
 
 
@@ -42,4 +52,89 @@ footer{
 
 .h-purple:hover{
     color: #7367f0 !important;
+}
+
+/* Juego Portada */
+.portada{
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    
+}
+.portada:before{
+    content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+
+
+/* Carrusel de Juegos */
+.wrapper{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.wrapper::-webkit-scrollbar{
+    background-color:#283046;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+.wrapper .juego{
+    min-width: 25%;
+    max-width: 25%;
+    margin-right: 8px;
+    background-color: #020716 ;
+    
+}
+
+.destacada{
+    object-fit: cover;
+}
+/* pantallas grandes */
+@media (min-width: 1440px) and (max-width: 1920px){
+    nav{
+        height: 55px;
+    }
+    .destacada{
+        width: 75%;
+    }
+}
+/* pantallas promedio */
+@media (min-width: 1040px) and (max-width: 1440px){
+    nav{
+        height: 55px;
+    }
+    .destacada{
+        width: 75%;
+    }
+}
+/* pantallas medianas */
+@media (min-width: 700px) and (max-width: 1040px){
+    .wrapper .juego{
+        min-width: 33.33%;
+        max-width: 33.33%;
+    }
+    .destacada{
+        width: 100%;
+        margin-top: 49px;
+    }
+}
+/* pantallas chicas */
+@media (min-width: 350px) and (max-width: 700px){
+    .wrapper .juego{
+        min-width: 50%;
+        max-width: 50%;
+        
+    }
+    .destacada{
+        width: 100%;
+        margin-top: 49px;
+    }
 }

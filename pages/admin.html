@@ -47,7 +47,7 @@
         </button>
       </div>
     </div>
-    <div>
+    <div class="wrapper">
       <table class="table text-light ">
         <thead>
           <tr>
@@ -68,45 +68,50 @@
 
   <!-- MODAL -->
   <div class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog bg-modal">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title text-dark">Agregar Juegos</h5>
+          <h5 class="modal-title text-light">Agregar Juegos</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form class="form" onsubmit="guardarJuego(event)" id="formulario">
-            <div class="form-control">
+            <div class="form-control text-light">
               <label>Codigo</label>
               <input type="number" class="form-control" id="codigoJuego" placeholder="Ingrese el codigo"
                 onkeyup="validarCodigo(this)" />
             </div>
-            <div class="form-control">
+            <div class="form-control text-light">
               <label>Nombre</label>
-              <input onblur="campoRequerido(this)" type="text" class="form-control" id="nombreJuego"
+              <input onblur="campoRequerido(this)" type="text" maxlength="30" class="form-control" id="nombreJuego"
                 placeholder="Ingrese el nombre" />
             </div>
-            <div class="form-control">
+            <div class="form-control text-light">
               <label>Catergoria</label>
-              <input onblur="campoRequerido(this)" type="text" class="form-control" id="categoriaJuego"
-                placeholder="Ingrese la categoria" />
+              <select onblur="campoRequerido(this)"class="form-control" id="categoriaJuego">
+                <option value="">Selecione una categoría</option>
+                <option value="accion">Acción</option>
+                <option value="aventura">Aventura</option>
+                <option value="deporte">Deporte</option>
+                <option value="estrategia">Estrategía</option>
+              </select>
             </div>
-            <div class="form-control">
+            <div class="form-control text-light">
               <label>Descripcion</label>
-              <input onblur="campoRequerido(this)" type="text" class="form-control" id="descripcionJuego"
-                placeholder="Ingrese la descripcion" />
+              <textarea onblur="campoRequerido(this)" type="text" maxlength="250" class="form-control" id="descripcionJuego"
+                placeholder="Ingrese la descripcion"></textarea>
             </div>
-            <div class="form-control">
+            <div class="form-control text-light">
               <label>Imagen</label>
               <input onblur="campoRequerido(this)" type="text" class="form-control" id="imagenesJuego"
                 placeholder="Ingrese la imagen" />
             </div>
-            <div class="form-control">
+            <div class="form-control text-light">
               <label>Codigo Youtube Embed</label>
               <input onblur="campoRequerido(this)" type="text" class="form-control" id="codigoEmbedJuego"
                 placeholder="Ingrese el codigo embed" />
             </div>
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-purple">Guardar</button>
           </form>
         </div>
       </div>
