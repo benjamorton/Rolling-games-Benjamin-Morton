@@ -24,7 +24,7 @@ footer{
 /* modal */
 form{
     background-color: #283046; 
-    padding:2rem 4rem;
+    padding:1rem 2rem;
     border-radius: 5px;
 }
 .bg-modal, .bg-modal div{
@@ -97,13 +97,19 @@ form{
 .destacada{
     object-fit: cover;
 }
+.formulario{
+    width: 100%;
+   }
 /* pantallas grandes */
 @media (min-width: 1440px) and (max-width: 1920px){
     nav{
         height: 55px;
     }
-    .destacada{
+    .destacada, .formulario{
         width: 75%;
+    }
+    form{
+        padding:2rem 4rem; 
     }
 }
 /* pantallas promedio */
@@ -111,8 +117,11 @@ form{
     nav{
         height: 55px;
     }
-    .destacada{
+    .destacada, .formulario{
         width: 75%;
+    }
+    form{
+        padding:2rem 4rem; 
     }
 }
 /* pantallas medianas */
@@ -127,7 +136,7 @@ form{
     }
 }
 /* pantallas chicas */
-@media (min-width: 350px) and (max-width: 700px){
+@media (min-width: 250px) and (max-width: 700px){
     .wrapper .juego{
         min-width: 50%;
         max-width: 50%;

@@ -10,30 +10,34 @@ const estrategia = juegos.filter(juego => juego.categoriaJuego === 'estrategia')
 const renderizarDatos = () => {
     let divAventura = document.getElementById('aventura');
     divAventura.innerHTML += aventura.map(juego => (
+        juego.publicado === true ?
         `<div class="juego" id="${juego.codigoJuego}">
         <a href="#"><img src="${juego.imagenesJuego}" class="w-100" alt=${juego.nombreJuego}></a>
-        </div>`
+        </div>` : null
     ))
 
     let divDeporte = document.getElementById('deporte');
-    divDeporte.innerHTML = deporte.map(juego => (
+    divDeporte.innerHTML += deporte.map(juego => (
+        juego.publicado === true ?
         `<div class="juego" id="${juego.codigoJuego}">
         <a href="#"><img src="${juego.imagenesJuego}" class="w-100" alt=${juego.nombreJuego}></a>
-        </div>`
+        </div>` : null
     ))
 
     let divAccion = document.getElementById('accion');
-    divAccion.innerHTML = accion.map(juego => (
+    divAccion.innerHTML += accion.map(juego => (
+        juego.publicado === true ?
         `<div class="juego" id="${juego.codigoJuego}">
         <a href="#"><img src="${juego.imagenesJuego}" class="w-100" alt=${juego.nombreJuego}></a>
-        </div>`
+        </div>` : null
     ))
 
     let divEstrategia = document.getElementById('estrategia');
-    divEstrategia.innerHTML = estrategia.map(juego => (
+    divEstrategia.innerHTML += estrategia.map(juego => (
+        juego.publicado === true ?
         `<div class="juego" id="${juego.codigoJuego}">
         <a href="#"><img src="${juego.imagenesJuego}" class="w-100" alt=${juego.nombreJuego}></a>
-        </div>`
+        </div>` : null
     ))
 
     let divPortada = document.getElementById('portada');
