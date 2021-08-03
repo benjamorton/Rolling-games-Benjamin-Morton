@@ -38,6 +38,10 @@ form{
     background-color: #7367f0;
     color: white;
 }
+.btn-purple:hover{
+    background-color: #645bd0;
+    color: white;
+}
 .purple{
     color: #7367f0;
 }
@@ -71,6 +75,9 @@ form{
 	right: 0;
 	background-color: rgba(0,0,0,0.3);
 }
+.datosDestacada{
+    z-index: 4;
+}
 
 
 
@@ -100,6 +107,34 @@ form{
 .formulario{
     width: 100%;
    }
+
+   /* Detalle */
+
+.detalle{
+    background-color: #283046; 
+    padding:1rem 2rem;
+    border-radius: 5px;
+}
+.imgJuego{
+    height: 40rem;
+    object-fit: cover;
+}
+.imgDetalle{
+    width: 100%;
+}
+.detalle-wrapper{
+    width: 40%;
+}
+.frame{
+    width: 50%;
+    height: 500px;
+}
+/* error */
+
+.error{
+    width: 50%;
+}
+
 /* pantallas grandes */
 @media (min-width: 1440px) and (max-width: 1920px){
     nav{
@@ -113,7 +148,7 @@ form{
     }
 }
 /* pantallas promedio */
-@media (min-width: 1040px) and (max-width: 1440px){
+@media (min-width: 991px) and (max-width: 1440px){
     nav{
         height: 55px;
     }
@@ -125,7 +160,7 @@ form{
     }
 }
 /* pantallas medianas */
-@media (min-width: 700px) and (max-width: 1040px){
+@media (min-width: 700px) and (max-width: 990px){
     .wrapper .juego{
         min-width: 33.33%;
         max-width: 33.33%;
@@ -134,9 +169,12 @@ form{
         width: 100%;
         margin-top: 49px;
     }
+    .error{
+        width: 90%;
+    }
 }
 /* pantallas chicas */
-@media (min-width: 250px) and (max-width: 700px){
+@media (min-width: 250px) and (max-width: 767px){
     .wrapper .juego{
         min-width: 50%;
         max-width: 50%;
@@ -145,5 +183,15 @@ form{
     .destacada{
         width: 100%;
         margin-top: 49px;
+    }
+    .detalle-wrapper{
+        width: 100%;
+    }
+    .frame{
+        width: 100%;
+        height: 300px;
+    }
+    .error{
+        width: 90%;
     }
 }
